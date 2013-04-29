@@ -1,6 +1,6 @@
 #Cats
 
-Cats is a Javascript plugin that will replace all <img>s on a page with pictures of cats when a certain URL hash criteria is met.
+Cats is a Javascript plugin that will replace all `<img>`s on a page with pictures of cats when a certain URL hash criteria is met.
 
 ##Usage
 
