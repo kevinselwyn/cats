@@ -32,14 +32,10 @@
 		url: "placekitten.com",
 		cutoff: 100,
 		url_generate: function (width, height) {
-			var url = ["http:/", this.url, width, height].join("/");
-
-			return url;
+			return ["http:/", this.url, width, height].join("/");
 		},
 		hash_check: function () {
-			var hash = window.location.hash, components = ["#", this.hash];
-
-			if (hash !== components.join("")) {
+			if (window.location.hash !== ["#", this.hash].join("")) {
 				this.reset();
 				return this;
 			}
@@ -48,10 +44,10 @@
 			return this;
 		},
 		replace: function () {
-			var i = 0, cutoff = this.cutoff, images = this.images,
-				length = images.length, width = 0, height = 0;
+			var i = 0, cutoff = this.cutoff, images = this.images, length = 0,
+				width = 0, height = 0;
 
-			for (i = 0; i < length; i += 1) {
+			for (i = 0, length = images.length; i < length; i += 1) {
 				width = images[i].width;
 				height = images[i].height;
 
@@ -64,10 +60,9 @@
 			return true;
 		},
 		reset: function () {
-			var i = 0, images = this.images, length = images.length,
-				src = "";
+			var i = 0, images = this.images, length = 0, src = "";
 
-			for (i = 0; i < length; i += 1) {
+			for (i = 0, length = images.length; i < length; i += 1) {
 				src = images[i].getAttribute("data-src");
 
 				if (src) {
