@@ -7,7 +7,7 @@ Cats is a Javascript plugin that will replace all `<img>`s on a page with pictur
 Include the following in the `<head>` of your document:
 
 ```html
-<script type="text/javascript" src="dist/cats.min.js"></script>
+<script src="cats.js"></script>
 ```
 
 To initialize the plugin, add the following to your document:
